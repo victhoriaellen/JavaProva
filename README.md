@@ -1,5 +1,3 @@
-# JavaProva
-Pojeto para prova de java
 # 📚 API REST com Spring Boot – Avaliação 1
 
 ## 📌 Descrição do Projeto
