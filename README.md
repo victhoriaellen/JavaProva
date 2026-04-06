@@ -59,3 +59,66 @@ public class Aluno {
     private String email;
     private String cpf;
 }
+
+### 📁 Repository
+
+```java
+public interface AlunoRepository extends JpaRepository<Aluno, Long> {
+}
+
+📁 Service
+@Service
+public class AlunoService {
+
+    @Autowired
+    private AlunoRepository alunoRepository;
+
+    public Aluno salvarAluno(Aluno aluno) {
+        return alunoRepository.save(aluno);
+    }
+
+    public List<Aluno> listarAlunos() {
+        return alunoRepository.findAll();
+    }
+
+    public Aluno buscarPorId(Long id) {
+        return alunoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+    }
+
+    public Aluno atualizarAluno(Long id, Aluno alunoAtualizado) {
+        Aluno aluno = buscarPorId(id);
+        aluno.setNomeCompleto(alunoAtualizado.getNomeCompleto());
+        aluno.setEmail(alunoAtualizado.getEmail());
+        aluno.setCpf(alunoAtualizado.getCpf());
+        return alunoRepository.save(aluno);
+    }
+
+    public void deletarAluno(Long id) {
+        alunoRepository.deleteById(id);
+    }
+}
+
+👨‍🏫 Entidade Professor
+
+A entidade Professor segue a mesma estrutura utilizada para Aluno, incluindo:
+
+Repository
+Service
+Controller
+
+Alterando apenas nomes de classes e endpoints para /professores.
+
+🔗 Endpoints da API
+📌 Alunos
+GET /alunos
+POST /alunos
+GET /alunos/{id}
+PUT /alunos/{id}
+DELETE /alunos/{id}
+📌 Professores
+GET /professores
+POST /professores
+GET /professores/{id}
+PUT /professores/{id}
+DELETE /professores/{id}
