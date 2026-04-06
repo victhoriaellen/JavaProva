@@ -1,3 +1,14 @@
+Boa pergunta — e relaxa, você percebeu certo 👀
+
+**Sim, agora está 100% em Markdown**, mas tem um detalhe importante:
+
+👉 No GitHub, **os `id="..."` dentro dos blocos de código NÃO são necessários** (isso foi só formatação interna daqui).
+
+Então vou te mandar a versão **100% limpa e correta pro README.md**, sem nada extra — essa é a que você deve usar 👇
+
+---
+
+````markdown
 # 📚 API REST com Spring Boot – Avaliação 1
 
 ## 📌 Descrição do Projeto
@@ -34,13 +45,15 @@ A aplicação segue o padrão de separação em camadas:
 Responsável por representar as entidades do sistema, correspondentes às tabelas do banco de dados.
 
 ### 📂 Repository
-Responsável pelo acesso aos dados, utilizando o Spring Data JPA para abstração das operações no banco.
+Responsável pelo acesso aos dados, utilizando o Spring Data JPA.
 
 ### 📂 Service
-Contém as regras de negócio da aplicação, intermediando a comunicação entre Controller e Repository.
+Contém as regras de negócio da aplicação.
 
 ### 📂 Controller
-Responsável por expor os endpoints da API e gerenciar as requisições HTTP.
+Responsável por expor os endpoints da API.
+
+---
 
 ## 🔍 Estrutura da Implementação
 
@@ -59,14 +72,36 @@ public class Aluno {
     private String email;
     private String cpf;
 }
+````
+
+**Anotações utilizadas:**
+
+* `@Entity` → define a classe como entidade JPA
+* `@Table` → define o nome da tabela
+* `@Id` → chave primária
+* `@GeneratedValue` → geração automática do ID
+
+---
 
 ### 📁 Repository
 
 ```java
 public interface AlunoRepository extends JpaRepository<Aluno, Long> {
 }
+```
 
-📁 Service
+Principais métodos disponíveis:
+
+* `save()`
+* `findAll()`
+* `findById()`
+* `deleteById()`
+
+---
+
+### 📁 Service
+
+```java
 @Service
 public class AlunoService {
 
@@ -98,27 +133,77 @@ public class AlunoService {
         alunoRepository.deleteById(id);
     }
 }
+```
 
-👨‍🏫 Entidade Professor
+---
 
-A entidade Professor segue a mesma estrutura utilizada para Aluno, incluindo:
+### 📁 Controller
 
-Repository
-Service
-Controller
+```java
+@RestController
+@RequestMapping("/alunos")
+public class AlunoController {
 
-Alterando apenas nomes de classes e endpoints para /professores.
+    @Autowired
+    private AlunoService alunoService;
 
-🔗 Endpoints da API
-📌 Alunos
-GET /alunos
-POST /alunos
-GET /alunos/{id}
-PUT /alunos/{id}
-DELETE /alunos/{id}
-📌 Professores
-GET /professores
-POST /professores
-GET /professores/{id}
-PUT /professores/{id}
-DELETE /professores/{id}
+    @PostMapping
+    public Aluno criarAluno(@RequestBody Aluno aluno) {
+        return alunoService.salvarAluno(aluno);
+    }
+
+    @GetMapping
+    public List<Aluno> listarAlunos() {
+        return alunoService.listarAlunos();
+    }
+
+    @GetMapping("/{id}")
+    public Aluno buscarAluno(@PathVariable Long id) {
+        return alunoService.buscarPorId(id);
+    }
+
+    @PutMapping("/{id}")
+    public Aluno atualizarAluno(@PathVariable Long id, @RequestBody Aluno aluno) {
+        return alunoService.atualizarAluno(id, aluno);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletarAluno(@PathVariable Long id) {
+        alunoService.deletarAluno(id);
+    }
+}
+```
+
+---
+
+## 👨‍🏫 Entidade Professor
+
+A entidade **Professor** segue a mesma estrutura da entidade Aluno, incluindo:
+
+* Model
+* Repository
+* Service
+* Controller
+
+Alterando apenas nomes de classes e endpoints para `/professores`.
+
+---
+
+## 🔗 Endpoints da API
+
+### 📌 Alunos
+
+* GET /alunos
+* POST /alunos
+* GET /alunos/{id}
+* PUT /alunos/{id}
+* DELETE /alunos/{id}
+
+### 📌 Professores
+
+* GET /professores
+* POST /professores
+* GET /professores/{id}
+* PUT /professores/{id}
+* DELETE /professores/{id}
+
