@@ -197,7 +197,8 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 
 ###📸 Testes no Insomnia
 ---
-###Criar Aluno (POST)
+
+### Criar Aluno (POST)
 <img width="857" height="664" alt="Captura de tela 2026-04-06 174029" src="https://github.com/user-attachments/assets/c316e0bb-f27f-48d3-8cec-71e13f6d13d9" />
 
 ### Listar Alunos (GET)
@@ -206,6 +207,7 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 ### Editar Alunos (PUT)
 <img width="856" height="745" alt="image" src="https://github.com/user-attachments/assets/3e61eeed-e702-498d-8634-35e76b35dd3c" />
 
+### 
 
 
 
@@ -215,16 +217,4 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-* DELETE /professores/{id}
 
