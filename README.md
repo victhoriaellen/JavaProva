@@ -1,14 +1,3 @@
-Boa pergunta — e relaxa, você percebeu certo 👀
-
-**Sim, agora está 100% em Markdown**, mas tem um detalhe importante:
-
-👉 No GitHub, **os `id="..."` dentro dos blocos de código NÃO são necessários** (isso foi só formatação interna daqui).
-
-Então vou te mandar a versão **100% limpa e correta pro README.md**, sem nada extra — essa é a que você deve usar 👇
-
----
-
-````markdown
 # 📚 API REST com Spring Boot – Avaliação 1
 
 ## 📌 Descrição do Projeto
