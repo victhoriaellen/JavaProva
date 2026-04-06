@@ -194,5 +194,37 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 * POST /professores
 * GET /professores/{id}
 * PUT /professores/{id}
+
+###📸 Testes no Insomnia
+---
+###Criar Aluno (POST)
+<img width="857" height="664" alt="Captura de tela 2026-04-06 174029" src="https://github.com/user-attachments/assets/c316e0bb-f27f-48d3-8cec-71e13f6d13d9" />
+
+### Listar Alunos (GET)
+<img width="727" height="581" alt="image" src="https://github.com/user-attachments/assets/33c13fa9-5588-433b-9175-cb6e36db63bd" />
+
+### Editar Alunos (PUT)
+<img width="856" height="745" alt="image" src="https://github.com/user-attachments/assets/3e61eeed-e702-498d-8634-35e76b35dd3c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * DELETE /professores/{id}
 
