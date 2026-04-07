@@ -195,7 +195,7 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 * GET /professores/{id}
 * PUT /professores/{id}
 
-###📸 Testes no Insomnia
+### Testes no Insomnia
 ---
 
 ### Criar Aluno (POST)
@@ -207,7 +207,23 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 ### Editar Alunos (PUT)
 <img width="856" height="745" alt="image" src="https://github.com/user-attachments/assets/3e61eeed-e702-498d-8634-35e76b35dd3c" />
 
-### 
+### Buscar Aluno Por ID (GET)
+
+### Deletar Aluno Por ID (DEL)
+
+### Criar Professor (POST)
+
+###  Listar Professores (GET)
+
+### Editar Professores (PUT)
+
+###  Buscar Professor Por ID (GET)
+
+### Deletar Professor Por ID (DEL)
+
+---
+
+### Banco de Dados
 
 
 
