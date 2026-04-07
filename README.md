@@ -208,22 +208,44 @@ Alterando apenas nomes de classes e endpoints para `/professores`.
 <img width="856" height="745" alt="image" src="https://github.com/user-attachments/assets/3e61eeed-e702-498d-8634-35e76b35dd3c" />
 
 ### Buscar Aluno Por ID (GET)
+<img width="726" height="269" alt="image" src="https://github.com/user-attachments/assets/53f7b6ff-072d-4fee-a06f-296aa9c83557" />
+
 
 ### Deletar Aluno Por ID (DEL)
+<img width="614" height="274" alt="image" src="https://github.com/user-attachments/assets/05991775-1d03-429d-8181-88a840be6854" />
+
 
 ### Criar Professor (POST)
+<img width="617" height="280" alt="image" src="https://github.com/user-attachments/assets/b67b6103-f017-41b0-88bc-f61b1b53e5a6" />
+
 
 ###  Listar Professores (GET)
+<img width="666" height="314" alt="image" src="https://github.com/user-attachments/assets/0dd63eee-f2ea-4301-86e4-86b528cc87b3" />
+
 
 ### Editar Professores (PUT)
+<img width="618" height="250" alt="image" src="https://github.com/user-attachments/assets/54d8b384-5498-4267-940c-12786c4c2a37" />
+
 
 ###  Buscar Professor Por ID (GET)
+<img width="687" height="261" alt="image" src="https://github.com/user-attachments/assets/4078a7b6-683e-4518-a2dc-3d8417455720" />
+
 
 ### Deletar Professor Por ID (DEL)
+<img width="620" height="231" alt="image" src="https://github.com/user-attachments/assets/cd7565c1-db95-4713-a917-34c8b7dff49c" />
+
 
 ---
 
 ### Banco de Dados
+
+### Tabela Aluno
+<img width="549" height="292" alt="image" src="https://github.com/user-attachments/assets/0624bf7a-7dfe-430a-9476-75298041363a" />
+
+### Tabela Professor
+
+<img width="550" height="295" alt="image" src="https://github.com/user-attachments/assets/eeba3e4f-28cc-42e8-88ad-b4d7f77ad6f0" />
+
 
 
 
